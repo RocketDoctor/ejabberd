@@ -254,6 +254,7 @@ CREATE INDEX i_spool_sh_username ON spool USING btree (server_host, username);
 CREATE TABLE archive (
     username text NOT NULL,
     server_host text NOT NULL,
+    identifier text,
     timestamp BIGINT NOT NULL,
     peer text NOT NULL,
     bare_peer text NOT NULL,
@@ -267,6 +268,7 @@ CREATE TABLE archive (
 );
 
 CREATE INDEX i_archive_sh_username_timestamp ON archive USING btree (server_host, username, timestamp);
+CREATE INDEX i_archive_sh_identifier_timestamp ON archive USING btree (identifier, server_host, username, timestamp);
 CREATE INDEX i_archive_sh_username_peer ON archive USING btree (server_host, username, peer);
 CREATE INDEX i_archive_sh_username_bare_peer ON archive USING btree (server_host, username, bare_peer);
 CREATE INDEX i_archive_sh_timestamp ON archive USING btree (server_host, timestamp);

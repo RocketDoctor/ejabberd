@@ -304,6 +304,7 @@ store(Pkt, LServer, {LUser, LHost}, Type, Peer, Nick, _Dir, TS,
     LPeer = jid:encode(
 	      jid:tolower(Peer)),
     Body = fxml:get_subtag_cdata(Pkt, <<"body">>),
+    Identifier = fxml:get_subtag_cdata(Pkt, <<"identifier">>),
     SType = misc:atom_to_binary(Type),
     SqlType = ejabberd_option:sql_type(LServer),
     XML = case mod_mam_opt:compress_xml(LServer) of
@@ -341,6 +342,7 @@ store(Pkt, LServer, {LUser, LHost}, Type, Peer, Nick, _Dir, TS,
 	               "txt=N%(Body)s",
 	               "kind=%(SType)s",
 	               "nick=%(Nick)s",
+		       "identifier=N%(Identifier)s",
 	               "origin_id=%(OriginID)s"])) of
 		{updated, _} ->
 		    ok;
@@ -358,6 +360,7 @@ store(Pkt, LServer, {LUser, LHost}, Type, Peer, Nick, _Dir, TS,
 	               "bare_peer=%(BarePeer)s",
 	               "xml=%(XML)s",
 	               "txt=%(Body)s",
+		       "identifier=%(Identifier)s",
 	               "kind=%(SType)s",
 	               "nick=%(Nick)s",
 	               "origin_id=%(OriginID)s"])) of
@@ -537,6 +540,7 @@ export(_Server) ->
                 LPeer = jid:encode(jid:tolower(Peer)),
                 XML = fxml:element_to_binary(Pkt),
                 Body = fxml:get_subtag_cdata(Pkt, <<"body">>),
+		Identifier = fxml:get_subtag_cdata(Pkt, <<"identifier">>),
                 SType = misc:atom_to_binary(Type),
                 SqlType = ejabberd_option:sql_type(Host),
                 case SqlType of
@@ -549,6 +553,7 @@ export(_Server) ->
 	                     "bare_peer=%(BarePeer)s",
 	                     "xml=N%(XML)s",
 	                     "txt=N%(Body)s",
+			     "identifier=N%(Identifier)s",
 	                     "kind=%(SType)s",
 	                     "nick=%(Nick)s",
                              "origin_id=%(OriginID)s"])];
@@ -561,6 +566,7 @@ export(_Server) ->
 	                     "bare_peer=%(BarePeer)s",
 	                     "xml=%(XML)s",
 	                     "txt=%(Body)s",
+			     "identifier=%(Identifier)s",
 	                     "kind=%(SType)s",
 	                     "nick=%(Nick)s",
                              "origin_id=%(OriginID)s"])]
@@ -611,7 +617,7 @@ make_sql_query(User, LServer, MAMQuery, RSM, ExtraUsernames) ->
 			  []
 		  end,
     WithTextClause = if is_binary(WithText), WithText /= <<>> ->
-			     [<<" and match (txt) against (">>,
+			     [<<" and match (identifier) against (">>,
 			      ToString(WithText), <<")">>];
 			true ->
 			     []
