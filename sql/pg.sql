@@ -92,6 +92,7 @@ CREATE INDEX i_despool ON spool USING btree (username);
 
 CREATE TABLE archive (
     username text NOT NULL,
+    identifier text,
     timestamp BIGINT NOT NULL,
     peer text NOT NULL,
     bare_peer text NOT NULL,
@@ -105,6 +106,7 @@ CREATE TABLE archive (
 );
 
 CREATE INDEX i_username_timestamp ON archive USING btree (username, timestamp);
+CREATE INDEX i_archive_dentifier_timestamp ON archive USING btree (identifier,timestamp);
 CREATE INDEX i_username_peer ON archive USING btree (username, peer);
 CREATE INDEX i_username_bare_peer ON archive USING btree (username, bare_peer);
 CREATE INDEX i_timestamp ON archive USING btree (timestamp);
