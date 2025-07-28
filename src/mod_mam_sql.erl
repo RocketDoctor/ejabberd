@@ -617,11 +617,10 @@ make_sql_query(User, LServer, MAMQuery, RSM, ExtraUsernames) ->
 			  []
 		  end,
     WithTextClause = if is_binary(WithText), WithText /= <<>> ->
-			     [<<" and match (identifier) against (">>,
-			      ToString(WithText), <<")">>];
-			true ->
-			     []
-		     end,
+			 [<<" and identifier = ">>, ToString(WithText)];
+                     true ->
+                     	 []
+                  end,
     WithClause = case catch jid:tolower(With) of
 		     {_, _, <<>>} ->
 			 [<<" and bare_peer=">>,
