@@ -92,7 +92,7 @@ CREATE INDEX i_despool ON spool USING btree (username);
 
 CREATE TABLE archive (
     username text NOT NULL,
-    identifier text,
+    identifier varchar(64),
     timestamp BIGINT NOT NULL,
     peer text NOT NULL,
     bare_peer text NOT NULL,

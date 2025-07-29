@@ -37,7 +37,7 @@ RUN ./autogen.sh && \
 RUN set -ex && \
     target_dir=$(find $EJABBERD_HOME/build/lib -maxdepth 1 -type d -name "ejabberd-*") && \
     mkdir -p "$target_dir/priv/sql" && \
-    cp sql/pg.sql "$target_dir/priv/sql/pg.sql"
+    cp sql/pg.new.sql "$target_dir/priv/sql/pg.new.sql"
 
 # Set PATH to include ejabberd binaries
 ENV PATH="$EJABBERD_HOME/build/sbin:$PATH"

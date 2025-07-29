@@ -254,7 +254,7 @@ CREATE INDEX i_spool_sh_username ON spool USING btree (server_host, username);
 CREATE TABLE archive (
     username text NOT NULL,
     server_host text NOT NULL,
-    identifier text,
+    identifier varchar(64),
     timestamp BIGINT NOT NULL,
     peer text NOT NULL,
     bare_peer text NOT NULL,
