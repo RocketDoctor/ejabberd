@@ -29,7 +29,7 @@ COPY . .
 
 # Build ejabberd with PostgreSQL support
 RUN ./autogen.sh && \
-    ./configure --prefix=$EJABBERD_HOME/build --enable-pgsql && \
+    ./configure --prefix=$EJABBERD_HOME/build --enable-pgsql --enable-mam --enable-pubsub && \
     make && \
     make install
 
