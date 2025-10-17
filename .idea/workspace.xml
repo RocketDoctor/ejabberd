@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fc212994-1675-4147-b4b5-353fcd1d3f6d" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="wynne/ejabberd-connect-user" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="30OUN1hG3DV6c7Xwmra7fRYbjKR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/wynnetran/Projects/RocketDoctor/ejabberd",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.26830.93" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc212994-1675-4147-b4b5-353fcd1d3f6d" name="Changes" comment="" />
+      <created>1753498068413</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753498068413</updated>
+      <workItem from="1753498069763" duration="3529000" />
+      <workItem from="1753547425325" duration="271000" />
+      <workItem from="1753548892149" duration="4253000" />
+      <workItem from="1753564893536" duration="10749000" />
+      <workItem from="1753633795847" duration="19865000" />
+      <workItem from="1753709267337" duration="4991000" />
+      <workItem from="1753721584390" duration="1687000" />
+      <workItem from="1753726533978" duration="859000" />
+      <workItem from="1754863621704" duration="4297000" />
+      <workItem from="1754926469378" duration="1275000" />
+      <workItem from="1754959310729" duration="5097000" />
+      <workItem from="1755009209714" duration="3795000" />
+      <workItem from="1755450968486" duration="103000" />
+      <workItem from="1755528370141" duration="785000" />
+      <workItem from="1755529988923" duration="915000" />
+      <workItem from="1756477987770" duration="1315000" />
+      <workItem from="1756490601937" duration="1151000" />
+      <workItem from="1756661945734" duration="225000" />
+      <workItem from="1756663941559" duration="2968000" />
+      <workItem from="1756738728151" duration="106000" />
+      <workItem from="1757984702162" duration="594000" />
+      <workItem from="1757990266595" duration="120000" />
+      <workItem from="1758168762300" duration="1782000" />
+      <workItem from="1758648091806" duration="5990000" />
+      <workItem from="1758660298578" duration="1654000" />
+      <workItem from="1758732760803" duration="1730000" />
+      <workItem from="1758741032563" duration="172000" />
+      <workItem from="1758741428379" duration="1641000" />
+      <workItem from="1758744737265" duration="465000" />
+      <workItem from="1758745450899" duration="791000" />
+      <workItem from="1758772670291" duration="1951000" />
+      <workItem from="1758777166945" duration="378000" />
+      <workItem from="1758809868436" duration="3000" />
+      <workItem from="1758895548941" duration="751000" />
+      <workItem from="1758908600976" duration="1919000" />
+      <workItem from="1759248916224" duration="11501000" />
+      <workItem from="1759388152325" duration="734000" />
+      <workItem from="1759418407610" duration="2761000" />
+      <workItem from="1760292938300" duration="652000" />
+      <workItem from="1760335558347" duration="79000" />
+      <workItem from="1760335766843" duration="2112000" />
+      <workItem from="1760374948736" duration="3382000" />
+      <workItem from="1760554298194" duration="1269000" />
+      <workItem from="1760714830050" duration="382000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
