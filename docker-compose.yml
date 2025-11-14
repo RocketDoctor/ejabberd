@@ -1,0 +1,35 @@
+services:
+  ejabberd:
+    image: ${GCP_ZONE}-docker.pkg.dev/${GCP_PROJECT}/${GCP_REPOSITORY}/${GCP_REPO_NAME}:${GCP_REPO_TAG}
+
+    container_name: ejabberd
+    restart: unless-stopped
+    # Network mode host to allow access to local GCP SQL Proxy on 127.0.0.1
+    # Alternatively use extra_hosts if not allowed to use host network.
+    network_mode: host
+    environment:
+      # Database settings to reach GCP SQL Proxy on localhost
+      DB_TYPE: ${DB_TYPE}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      EJABBERD_DOMAIN: ${EJABBERD_DOMAIN}
+      CERT_NUMBER: ${CERT_NUMBER}
+
+    # If host network is not possible, comment network_mode and use ports and extra_hosts below
+    ports:
+      - "5222:5222"
+      - "5269:5269"
+      - "5280:5280"
+      - "5443:5443"
+      # Any additional ejabberdctl envs can be added here
+    volumes:
+      # Mount TLS certs (PEM) from host into container path expected by ejabberd
+      - ${ENCRYPT_FOLDER}:/opt/ejabberd/build/etc/ejabberd/ssl:ro
+      # Optionally mount custom ejabberd.yml config
+      - ./ejabberd.yml.template:/opt/ejabberd/build/etc/ejabberd/ejabberd.yml.template
+      - ./entrypoint.sh:/opt/ejabberd/build/etc/ejabberd/entrypoint.sh
+      - ./secret/jwt.secret:/opt/ejabberd/build/etc/ejabberd/secret
+    entrypoint: ["/bin/sh", "/opt/ejabberd/build/etc/ejabberd/entrypoint.sh"]
