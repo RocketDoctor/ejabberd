@@ -31,12 +31,11 @@ hosts:
 
 loglevel: info
 
- #ca_file: /opt/ejabberd/conf/cacert.pem #commented off
-ca_file: /opt/ejabberd/build/etc/ejabberd/ssl/cert${CERT_NUMBER}.pem
+ca_file: /opt/ejabberd/build/etc/ejabberd/ssl/${EJABBERD_DOMAIN}.crt
 
 certfiles:
-  - /opt/ejabberd/build/etc/ejabberd/ssl/fullchain${CERT_NUMBER}.pem
-  - /opt/ejabberd/build/etc/ejabberd/ssl/privkey${CERT_NUMBER}.pem
+  - /opt/ejabberd/build/etc/ejabberd/ssl/${EJABBERD_DOMAIN}.crt
+  - /opt/ejabberd/build/etc/ejabberd/ssl/${EJABBERD_DOMAIN}.key
 
 #  - /etc/ejabberd/ssl/fullchain.pem
 #  - /etc/ejabberd/ssl/privkey.pem
