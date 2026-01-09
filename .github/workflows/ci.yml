@@ -1,20 +1,7 @@
 name: CI
 
 on:
-  push:
-    paths-ignore:
-    - '.devcontainer/**'
-    - 'lib/**'
-    - 'man/**'
-    - 'priv/**'
-    - '**.md'
-  pull_request:
-    paths-ignore:
-    - '.devcontainer/**'
-    - 'lib/**'
-    - 'man/**'
-    - 'priv/**'
-    - '**.md'
+  workflow_dispatch:
 
 env:
   DEV: _build/dev/rel/ejabberd
