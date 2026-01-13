@@ -157,7 +157,7 @@ access_rules:
 # SASL / Authentication
 # ========================
 disable_sasl_mechanisms: []  # allow all
-auth_method: [internal, jwt, anonymous]
+auth_method: [internal, jwt]
 jwt_key: "/opt/ejabberd/build/etc/ejabberd/secret"
 
 
